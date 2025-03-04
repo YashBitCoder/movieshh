@@ -82,7 +82,7 @@ async function getAllTrailers(trailerCont, url) {
 }
 
 export const fetchMainData = (url, type, baseCont, nums, templateId, pageNum, canShow = true, isMulti = false) => {
-    fetch(url)
+    fetch("/api/fetchBase")
     .then(res => res.json())
     .then((data) => {
         if(!isMulti) {
