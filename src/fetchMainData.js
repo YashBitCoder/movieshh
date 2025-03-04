@@ -161,7 +161,7 @@ export const fetchMainData = (url, type, baseCont, nums, templateId, pageNum, ca
 }
 
 export const fetchPeopleData = (url, baseCont, templateId, num = null, pageNum = null, canShow = false) => {
-    fetch(url)
+    fetch("/api/fetchBase")
     .then(res => res.json())
     .then((data) => {
         if(canShow) {
