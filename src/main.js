@@ -65,7 +65,7 @@ prevPage.addEventListener("click", () => {
     if(--currPage >= 1) setParams(null, null, currPage);
 });
 
-fetch("/api/fetchBase.js").then(res => res).then(console.log);
+fetch("/api/fetchBase.js").then(res => res.json()).then(console.log);
 
 menuEvents();
 if(!showCase()) showFrontInfo();
