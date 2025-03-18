@@ -65,7 +65,7 @@ prevPage.addEventListener("click", () => {
     if(--currPage >= 1) setParams(null, null, currPage);
 });
 
-fetch("/api/fetchBase.js").then(res => res.json()).then(console.log);
+fetch(`https://api.themoviedb.org/3/search/person?query=marcus&api_key=ea537ad1a5f6b9e5ab271ce9e8a88742&page=1`).then(res => res.json()).then(console.log);
 
 menuEvents();
 if(!showCase()) showFrontInfo();
